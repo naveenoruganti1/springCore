@@ -1,5 +1,5 @@
 package com.coredi.intrf;
 
-public interface IMessageWritter {
+public interface IMessageFormatter {
 	public String formateMessagewritter(String message);
 }

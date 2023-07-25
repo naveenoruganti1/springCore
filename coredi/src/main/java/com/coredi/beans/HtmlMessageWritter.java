@@ -1,8 +1,8 @@
 package com.coredi.beans;
 
-import com.coredi.intrf.IMessageWritter;
+import com.coredi.intrf.IMessageFormatter;
 
-public class HtmlMessageWritter implements IMessageWritter{
+public class HtmlMessageWritter implements IMessageFormatter{
 
 	@Override
 	public String formateMessagewritter(String message) {

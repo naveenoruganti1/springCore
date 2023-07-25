@@ -1,17 +1,17 @@
 package com.coredi.beans;
 
-import com.coredi.intrf.IMessageWritter;
+import com.coredi.intrf.IMessageFormatter;
 
 public class MessageWritter {
-	IMessageWritter messageWritter;
+	IMessageFormatter messageFormatter;
 	
 	public void writeMessage(String message) {
 		String cMessage = null;
 		
-		cMessage = messageWritter.formateMessagewritter(message);
+		cMessage = messageFormatter.formateMessagewritter(message);
 		System.out.println(cMessage);
 	}
-	public void setMessageWritter(IMessageWritter iMessageWritter) {
-		this.messageWritter = iMessageWritter; 
+	public void setMessageWritter(IMessageFormatter formatter) {
+		this.messageFormatter = formatter; 
 	}
 }
