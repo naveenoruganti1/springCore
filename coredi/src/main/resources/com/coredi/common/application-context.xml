@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="messageWritter" class="com.coredi.beans.MessageWritter">
+		<property name="messageWritter" ref="pdfMessageWritter"/>
+	</bean>
+	<bean id="htmlMessageWritter" class="com.coredi.beans.HtmlMessageWritter"/>
+	<bean id="pdfMessageWritter" class="com.coredi.beans.PdfMessageWritter" />
+</beans>
