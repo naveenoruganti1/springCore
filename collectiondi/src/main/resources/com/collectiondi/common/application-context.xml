@@ -14,4 +14,33 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="staff1" class="com.collectiondi.beans.Staff">
+		<property name="staffNo" value="1"/>
+		<property name="staffName" value="michael"/>
+		<property name="age" value="20"/>
+		<property name="gender" value="Male"/>
+	</bean>
+	<bean id="staff2" class="com.collectiondi.beans.Staff">
+		<property name="staffNo" value="2"/>
+		<property name="staffName" value="scott"/>
+		<property name="age" value="23"/>
+		<property name="gender" value="Male"/>
+	</bean>
+	<bean id="staff3" class="com.collectiondi.beans.Staff">
+		<property name="staffNo" value="3"/>
+		<property name="staffName" value="nicole"/>
+		<property name="age" value="26"/>
+		<property name="gender" value="Male"/>
+	</bean>
+	<bean id="store" class="com.collectiondi.beans.Store">
+		<constructor-arg value="1"/>
+		<property name="storeName" value="Jio Mart"/>
+		<property name="staff">
+			<set value-type="com.collectiondi.beans.Staff">
+				<ref bean="staff1"/>
+				<ref bean="staff2"/>
+				<ref bean="staff3"/>
+			</set>
+		</property>
+	</bean>
 </beans>
