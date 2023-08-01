@@ -43,4 +43,48 @@
 			</set>
 		</property>
 	</bean>
+	
+	<bean id="person1" class="com.collectiondi.beans.Person">
+		<property name="uid" value="U001"/>
+		<property name="fullName" value="Michael"/>
+		<property name="gender" value="Male"/>
+		<property name="age" value="20"/>
+	</bean>
+	<bean id="person2" class="com.collectiondi.beans.Person">
+		<property name="uid" value="U002"/>
+		<property name="fullName" value="Scott"/>
+		<property name="gender" value="Male"/>
+		<property name="age" value="23"/>
+	</bean>
+	<bean id="person3" class="com.collectiondi.beans.Person">
+		<property name="uid" value="U003"/>
+		<property name="fullName" value="Nicole"/>
+		<property name="gender" value="Male"/>
+		<property name="age" value="25"/>
+	</bean>
+	<bean id="electionCommission" class="com.collectiondi.beans.ElectionCommission">
+		<property name="electionList">
+			<map key-type="java.lang.String" value-type="com.collectiondi.beans.Person">
+				<entry key="e001" value-ref="person1"/>
+				<entry key="e002" value-ref="person2"/>
+				<entry key="e003" value-ref="person3"/>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="wishList" class="com.collectiondi.beans.WishList">
+		<property name="personName" value="Michael"/>
+		<property name="age" value="20"/>
+		<property name="location" value="Hyderabad"/>
+		<property name="wishList">
+			<props value-type="java.lang.String">
+				<prop key="Bike">
+					TVS Jupiter
+				</prop>
+				<prop key="food">
+					Biryani
+				</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
