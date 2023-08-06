@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="salesOrder" class="com.beanautowire.beans.SalesOrder" autowire="byType">
+		<property name="soNum" value="s001"/>
+		<property name="quantity" value="2"/>
+	</bean>
+	<bean id="distributor" class="com.beanautowire.beans.Distributor">
+		<property name="udNo" value="u001"/>
+		<property name="distributorName" value="Venkateswara Distributors"/>
+	</bean>
+
+</beans>
