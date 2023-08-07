@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="jobschedular" class="com.sfim.beans.JobShechduler">
+		<property name="jobSchedulerName" value="Nightly Job"/>
+		<property name="calendar" ref="calender"/>
+		<property name="priority" value="1"/>
+	</bean>
+	<bean id="calender" class="java.util.Calendar" factory-method="getInstance"/>
+</beans>
