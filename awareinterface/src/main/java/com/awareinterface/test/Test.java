@@ -13,6 +13,7 @@ public class Test {
 				new ClassPathResource("com/awareinterface/common/application-context.xml"));
 		Car car = beanFactory.getBean("car", Car.class);
 		car.drive();
+		
 	}
 
 }
