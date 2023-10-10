@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="meeting" class="com.fb.beans.Meeting">
+		<property name="meetingName" value="Standup call"/>
+		<property name="attendies" value="michael,scott,nicole"/>
+		<property name="meetingTime" ref="calender"/>
+	</bean>
+	<bean id="calender" class="com.fb.beans.CalenderFactoryBean"
+	c:year="2023" c:month="10" c:day="12" c:hours="09" c:minutes="20"/>
+</beans>
